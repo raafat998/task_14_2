@@ -1,0 +1,53 @@
+.left-container{
+    width: 30%;
+
+   
+   
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.reight-container{
+    width: 90%;
+   
+    height: 98vh;
+}
+.carousel-item img {
+    width: 100%;
+   
+
+}
+.eye {
+    border: 2px solid #ccc;
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+.header {
+    
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.btn-light, .btn-secondary {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+}
+
+.container-p{
+    display: flex;
+flex-flow: row ;
+
+   
+    
+}
+
+
+
+
+.carousel-indicators .active {
+    background-color: #ff7900;
+}
