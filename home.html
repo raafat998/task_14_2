@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            text-align: center;
+        }
+
+        #welcomeMessage {
+            font-size: 2em;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            // قراءة بيانات المستخدم من sessionStorage
+            const storedUserJSON = sessionStorage.getItem('user');
+            
+            if (storedUserJSON) {
+                const storedUser = JSON.parse(storedUserJSON);
+                const welcomeMessage = `Welcome  ${storedUser.name}`;
+                document.getElementById('welcomeMessage').textContent = welcomeMessage;
+            } else {
+                document.getElementById('welcomeMessage').textContent = 'No user logged in';
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="welcomeMessage">Welcome</h1>
+</body>
+</html>
